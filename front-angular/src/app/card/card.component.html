@@ -1,0 +1,13 @@
+
+<div class="card-container m-5">
+    @for (card of cards(); track card) {
+        <div class="card" [ngStyle]="{'background-color': card.color}">
+            <div class="value">{{ card.value }}</div>
+        </div>
+    }
+</div>
+<div class="actions mx-5">
+    <button class="btn btn-primary m-4" (click)="sortCards()">Sort</button>
+    <button class="btn btn-primary m-4" (click)="getCards()">Generate</button>
+</div>
+  
